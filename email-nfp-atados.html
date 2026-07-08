@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Doe para o Atados sem gastar R$ 1</title>
+<!--
+  ════════════════════════════════════════════════════════════════════
+  OBSERVAÇÕES PARA QUEM VAI DISPARAR (dev/CRM)
+  ════════════════════════════════════════════════════════════════════
+  1. SUBSTITUIR antes de enviar:
+     • SUBSTITUIR_PELA_URL_DA_LP      → URL final da landing page, SEM barra no fim.
+       As UTMs já estão anexadas nos links (utm_source=crm&utm_medium=
+       email&utm_campaign=nfp-piloto). Manter!
+     • IMAGENS: os dois logos estão EMBUTIDOS em base64 só para este
+       arquivo abrir bonito no navegador. Gmail e Outlook DESCARTAM
+       imagens base64 — antes do disparo, subir os PNGs entregues junto
+       (logo-atados-azul.png e logo-atados-slogan-branco.png) no ESP/CDN
+       e trocar o src das duas tags <img> pela URL hospedada.
+     • Aqui é o time do Atados  → merge tag do ESP (ex.: *|PRIMEIRO_NOME|* no RD Station,
+       {{ contact.first_name }} no Brevo). Se a base não tiver nome
+       confiável, trocar a saudação por "Oi! Aqui é o Atados."
+     • Rodapé: link de descadastro (#) e endereço físico
+       são exigências legais (LGPD/CAN-SPAM) — usar as tags do ESP.
+  2. Enviar SEMPRE com versão texto-puro junto (o ESP gera; revisar).
+  3. Remetente sugerido: "Time do Atados" ou "Nome, do Atados"
+     (remetente com nome de pessoa tende a abrir mais que marca seca).
+  4. Assunto + preheader: ver opções entregues junto com este arquivo.
+  ════════════════════════════════════════════════════════════════════
+-->
+<style>
+  /* Progressive enhancement: clientes que suportam (Apple Mail etc.) */
+  @import url('https://fonts.googleapis.com/css2?family=Antonio:wght@700&family=Inter:wght@400;600;700&display=swap');
+  @media only screen and (max-width: 620px) {
+    .container { width: 100% !important; }
+    .px { padding-left: 20px !important; padding-right: 20px !important; }
+    .h1 { font-size: 26px !important; line-height: 34px !important; }
+    .btn a { display: block !important; }
+  }
+</style>
+</head>
+<body style="margin:0;padding:0;background-color:#EAF3FB;">
+
+<!-- Preheader (invisível; aparece como prévia na caixa de entrada) -->
+<div style="display:none;font-size:1px;color:#EAF3FB;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;">
+  Cadastro único de 5 minutos, custo zero, e suas compras em SP passam a doar pro Atados.&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+</div>
+
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#EAF3FB">
+<tr><td align="center" style="padding:24px 12px;">
+
+  <table role="presentation" class="container" width="600" cellpadding="0" cellspacing="0" border="0" style="width:600px;max-width:600px;">
+
+    <!-- ═══ Cabeçalho ═══ -->
+    <tr><td align="left" class="px" style="padding:8px 36px 20px;">
+      <a href="SUBSTITUIR_PELA_URL_DA_LP?utm_source=crm&amp;utm_medium=email&amp;utm_campaign=nfp-piloto&amp;utm_content=logo" target="_blank" style="text-decoration:none;">
+        <img src="https://raw.githubusercontent.com/Lucas-Atados/emails-rd-station/main/logo-atados-azul.png" width="132" alt="ATADOS" style="display:block;width:132px;height:auto;border:0;font-family:Arial,Helvetica,sans-serif;font-size:22px;font-weight:bold;color:#1E85DA;letter-spacing:1px;">
+      </a>
+    </td></tr>
+
+    <!-- ═══ Bloco principal ═══ -->
+    <tr><td bgcolor="#FFFFFF" class="px" style="background-color:#FFFFFF;border-radius:16px;padding:36px;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
+
+        <tr><td style="font-family:Inter,Arial,Helvetica,sans-serif;font-size:15px;line-height:23px;color:#40607C;padding-bottom:14px;">
+          Oi! Aqui é o time do Atados.
+        </td></tr>
+
+        <tr><td class="h1" style="font-family:Antonio,'Arial Black',Arial,Helvetica,sans-serif;font-size:30px;line-height:38px;font-weight:700;color:#044C88;text-transform:uppercase;padding-bottom:16px;">
+          Aquele &ldquo;CPF na nota?&rdquo; pode virar doa&ccedil;&atilde;o pro Atados. <span style="color:#D02387;">Custo: R$&nbsp;0,00.</span>
+        </td></tr>
+
+        <tr><td style="font-family:Inter,Arial,Helvetica,sans-serif;font-size:15px;line-height:24px;color:#40607C;padding-bottom:8px;">
+          Toda compra em S&atilde;o Paulo com CPF na nota gera cr&eacute;ditos da <strong style="color:#123049;">Nota Fiscal Paulista</strong>, um dinheiro que a maioria das pessoas nunca resgata e acaba se perdendo.
+        </td></tr>
+        <tr><td style="font-family:Inter,Arial,Helvetica,sans-serif;font-size:15px;line-height:24px;color:#40607C;padding-bottom:26px;">
+          Com <strong style="color:#123049;">um cadastro &uacute;nico de 5 minutos</strong>, esses cr&eacute;ditos passam a ser doados automaticamente para o Atados. Sua conta no fim do m&ecirc;s n&atilde;o muda nada, e voc&ecirc; continua concorrendo aos sorteios.
+        </td></tr>
+
+        <!-- ═══ Cupom (HTML vivo: aparece mesmo com imagens bloqueadas) ═══ -->
+        <tr><td style="padding-bottom:28px;">
+          <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#FDFDFB" style="background-color:#FDFDFB;border-top:2px dashed #9FC4E4;border-bottom:2px dashed #9FC4E4;">
+            <tr><td style="padding:20px 22px 6px;font-family:'Courier New',Courier,monospace;font-size:12px;color:#40607C;text-align:center;letter-spacing:1px;">
+              CUPOM DE IMPACTO SOCIAL &middot; S&Atilde;O PAULO/SP
+            </td></tr>
+            <tr><td style="padding:10px 22px 0;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="font-family:'Courier New',Courier,monospace;font-size:13px;color:#123049;">
+                <tr>
+                  <td style="padding:4px 0;">SUAS COMPRAS DE SEMPRE</td>
+                  <td align="right" style="padding:4px 0;">R$ &mdash;</td>
+                </tr>
+                <tr>
+                  <td style="padding:4px 0;">DOA&Ccedil;&Atilde;O AUTOM&Aacute;TICA ATADOS</td>
+                  <td align="right" style="padding:4px 0;">&#10003;</td>
+                </tr>
+                <tr>
+                  <td style="padding:4px 0;">SEUS SORTEIOS MENSAIS</td>
+                  <td align="right" style="padding:4px 0;">MANTIDOS</td>
+                </tr>
+              </table>
+            </td></tr>
+            <tr><td style="padding:10px 22px 20px;">
+              <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-top:2px dashed #C9DDEF;">
+                <tr>
+                  <td style="padding:12px 0 0;font-family:'Courier New',Courier,monospace;font-size:15px;font-weight:bold;color:#044C88;">TOTAL TIRADO DO SEU BOLSO</td>
+                  <td align="right" style="padding:12px 0 0;font-family:'Courier New',Courier,monospace;font-size:20px;font-weight:bold;color:#D02387;">R$ 0,00</td>
+                </tr>
+              </table>
+            </td></tr>
+          </table>
+        </td></tr>
+
+        <!-- ═══ CTA ═══ -->
+        <tr><td align="center" class="btn" style="padding-bottom:14px;">
+          <a href="SUBSTITUIR_PELA_URL_DA_LP?utm_source=crm&amp;utm_medium=email&amp;utm_campaign=nfp-piloto&amp;utm_content=cta-principal" target="_blank"
+             style="display:inline-block;background-color:#D02387;color:#FFFFFF;font-family:Inter,Arial,Helvetica,sans-serif;font-size:16px;font-weight:bold;text-decoration:none;padding:17px 34px;border-radius:12px;">
+            Quero ver como funciona &rarr;
+          </a>
+        </td></tr>
+        <tr><td align="center" style="font-family:Inter,Arial,Helvetica,sans-serif;font-size:12px;line-height:18px;color:#6B87A0;padding-bottom:6px;">
+          Passo a passo completo na p&aacute;gina &middot; leva &plusmn;5 minutos &middot; cancela quando quiser
+        </td></tr>
+
+      </table>
+    </td></tr>
+
+    <!-- ═══ P.S. ═══ -->
+    <tr><td class="px" style="padding:26px 36px 8px;font-family:Inter,Arial,Helvetica,sans-serif;font-size:14px;line-height:22px;color:#40607C;">
+      <strong style="color:#123049;">P.S.:</strong> voc&ecirc; s&oacute; precisa fazer isso uma vez na vida: vale por tempo indeterminado. S&atilde;o 5 minutos hoje que viram doa&ccedil;&atilde;o todo m&ecirc;s, sem voc&ecirc; pensar no assunto nunca mais. <a href="SUBSTITUIR_PELA_URL_DA_LP?utm_source=crm&amp;utm_medium=email&amp;utm_campaign=nfp-piloto&amp;utm_content=ps" target="_blank" style="color:#1E85DA;font-weight:600;">Come&ccedil;ar agora &rarr;</a>
+    </td></tr>
+
+    <!-- ═══ Rodapé ═══ -->
+    <tr><td style="padding:26px 0 0;">
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" bgcolor="#044C88" style="background-color:#044C88;border-radius:16px;">
+        <tr><td align="center" style="padding:28px 36px 6px;">
+          <img src="https://raw.githubusercontent.com/Lucas-Atados/emails-rd-station/main/logo-atados-slogan-branco.png" width="150" alt="Atados - Juntando Gente Boa" style="display:block;width:150px;height:auto;border:0;font-family:Arial,Helvetica,sans-serif;font-size:16px;font-weight:bold;color:#FFFFFF;">
+        </td></tr>
+        <tr><td align="center" style="padding:6px 36px 4px;font-family:Inter,Arial,Helvetica,sans-serif;font-size:12px;line-height:19px;color:#BFD8EE;">
+          Associa&ccedil;&atilde;o Atados &middot; CNPJ 18.110.558/0001-95<br>
+          atados.com.br &middot; contato@atados.com.br
+        </td></tr>
+        <tr><td align="center" style="padding:4px 36px 26px;font-family:Inter,Arial,Helvetica,sans-serif;font-size:11px;line-height:17px;color:#8FB6DA;">
+          Voc&ecirc; recebe este e-mail porque tem cadastro na plataforma do Atados.<br>
+          <a href="#" style="color:#8FB6DA;text-decoration:underline;">N&atilde;o quero mais receber</a> &middot; Rua dos Pinheiros, 706 - Casa 6, Pinheiros, São Paulo - SP
+        </td></tr>
+      </table>
+    </td></tr>
+
+  </table>
+
+</td></tr>
+</table>
+</body>
+</html>
