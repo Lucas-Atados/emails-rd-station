@@ -15,12 +15,14 @@
   o dado furado). No RD: segmento "recebeu a campanha nfp-piloto E não
   clicou em nenhum link".
 
-  SUBSTITUIR antes de enviar (mesmo do e-mail 1):
-    • https://atados.com.br/nota-fiscal-paulista → URL final da landing page.
-      Note que utm_campaign aqui é "nfp-piloto-reengaja" para o GA4
-      separar as conversões deste segundo disparo. Manter!
-    • Logos: mesmas URLs Raw do GitHub já usadas no e-mail 1.
-    • {{UNSUBSCRIBE}} / endereço: tratados pelo RD como no e-mail 1.
+  ESTADO: pronto para importar no RD Station. Nada a substituir.
+    • Landing page: https://atados.com.br/nota-fiscal-paulista
+    • UTMs: utm_source=email_reengajamento1 (separa este disparo do
+      e-mail 1 no GA4). utm_medium varia por posição do link.
+      Se o RD tiver UTMs automáticas ativas, DESATIVAR.
+    • Logos: mesmas URLs Raw do GitHub usadas no e-mail 1.
+    • Saudação usa *|PRIMEIRO_NOME|* — conferir fallback no RD.
+    • Descadastro/endereço: o RD injeta na importação.
 
   ASSUNTO + PREHEADER (opções para A/B):
     A) "Achou que ia dar trabalho?" / "São 4 cliques e 5 minutos. A gente te mostra cada tela."
@@ -60,7 +62,7 @@
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
 
         <tr><td style="font-family:Inter,Arial,Helvetica,sans-serif;font-size:15px;line-height:23px;color:#40607C;padding-bottom:14px;">
-          Oi! Aqui &eacute; o time do Atados de novo.
+          Oi, *|PRIMEIRO_NOME|*! O Atados aqui de novo.
         </td></tr>
 
         <tr><td class="h1" style="font-family:Antonio,'Arial Black',Arial,Helvetica,sans-serif;font-size:30px;line-height:38px;font-weight:700;color:#044C88;text-transform:uppercase;padding-bottom:16px;">
