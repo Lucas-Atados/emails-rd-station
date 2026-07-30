@@ -7,26 +7,29 @@
 <title>Doe para o Atados sem gastar R$ 1</title>
 <!--
   ════════════════════════════════════════════════════════════════════
-  OBSERVAÇÕES PARA QUEM VAI DISPARAR (dev/CRM)
+  E-MAIL 1 DA CADÊNCIA — DISPARO INICIAL
   ════════════════════════════════════════════════════════════════════
-  1. SUBSTITUIR antes de enviar:
-     • https://atados.com.br/nota-fiscal-paulista      → URL final da landing page, SEM barra no fim.
-       As UTMs já estão anexadas nos links (utm_source=crm&utm_medium=
-       email&utm_campaign=nfp-piloto). Manter!
-     • IMAGENS: os dois logos estão EMBUTIDOS em base64 só para este
-       arquivo abrir bonito no navegador. Gmail e Outlook DESCARTAM
-       imagens base64 — antes do disparo, subir os PNGs entregues junto
-       (logo-atados-azul.png e logo-atados-slogan-branco.png) no ESP/CDN
-       e trocar o src das duas tags <img> pela URL hospedada.
-     • Aqui é o time do Atados  → merge tag do ESP (ex.: *|PRIMEIRO_NOME|* no RD Station,
-       {{ contact.first_name }} no Brevo). Se a base não tiver nome
-       confiável, trocar a saudação por "Oi! Aqui é o Atados."
-     • Rodapé: link de descadastro (#) e endereço físico
-       são exigências legais (LGPD/CAN-SPAM) — usar as tags do ESP.
-  2. Enviar SEMPRE com versão texto-puro junto (o ESP gera; revisar).
-  3. Remetente sugerido: "Time do Atados" ou "Nome, do Atados"
-     (remetente com nome de pessoa tende a abrir mais que marca seca).
-  4. Assunto + preheader: ver opções entregues junto com este arquivo.
+  ESTADO: pronto para importar no RD Station. Nada a substituir.
+
+  • Landing page: https://atados.com.br/nota-fiscal-paulista
+  • UTMs (padrão Atados): utm_source=email_base1, utm_medium varia por
+    posição do link (logo / botao_email / comecar_agora).
+    IMPORTANTE: se o RD tiver "parâmetros UTM automáticos" ativos,
+    DESATIVAR — senão duplica ou sobrescreve estas UTMs.
+  • Logos: hospedados em raw.githubusercontent.com (repo emails-rd-station).
+  • Saudação: usa a variável *|PRIMEIRO_NOME|*. Conferir no RD se há
+    valor padrão (fallback) para contatos sem nome preenchido.
+  • Descadastro e endereço físico no rodapé: exigências legais (LGPD).
+    O RD normalmente injeta o link de descadastro na importação.
+
+  ASSUNTO + PREHEADER (opções para A/B):
+    A) "Doe pro Atados sem tirar R$ 1 do bolso"
+       / "Cadastro único de 5 min e suas compras em SP doam sozinhas."
+    B) "Aquele 'CPF na nota?' vale mais do que você pensa"
+       / "Em SP, ele pode virar doação automática pro Atados. De graça."
+
+  REMETENTE: nome de pessoa + Atados (ex.: "Lucas, do Atados") tende a
+  abrir mais que apenas a marca.
   ════════════════════════════════════════════════════════════════════
 -->
 <style>
@@ -64,7 +67,7 @@
       <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">
 
         <tr><td style="font-family:Inter,Arial,Helvetica,sans-serif;font-size:15px;line-height:23px;color:#40607C;padding-bottom:14px;">
-          Oi! Aqui é o time do Atados.
+          Oi, *|PRIMEIRO_NOME|*!
         </td></tr>
 
         <tr><td class="h1" style="font-family:Antonio,'Arial Black',Arial,Helvetica,sans-serif;font-size:30px;line-height:38px;font-weight:700;color:#044C88;text-transform:uppercase;padding-bottom:16px;">
