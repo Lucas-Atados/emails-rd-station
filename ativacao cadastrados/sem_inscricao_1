@@ -80,32 +80,17 @@
                 width: 100% !important;
                 box-sizing: border-box;
             }
-            .logo-cell, .caf-cell {
-                display: block !important;
-                width: 100% !important;
-                text-align: center !important;
-            }
-            .logo-cell {
-                margin-bottom: 20px !important;
-            }
-            .logo-cell img {
-                margin: 0 auto !important;
-            }
-            .caf-table {
-                margin: 0 auto !important;
-                float: none !important;
-            }
         }
     </style>
 </head>
 <body>
     <!-- Preheader (invisível; aparece como prévia na caixa de entrada) -->
     <div style="display:none;font-size:1px;color:#f5f8fc;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;">
-        O voluntariado não é a única forma de ajudar. Veja outras maneiras de apoiar o Atados.&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+        O voluntariado presencial não é a única forma de ajudar. Veja outras maneiras de apoiar o Atados.&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
     </div>
     <center class="wrapper">
         
-        <!-- HEADER PADRONIZADO (LOGO + CAF INTERNATIONAL) -->
+        <!-- HEADER PADRONIZADO (LOGO + CAF INTERNATIONAL) — sempre empilhado, não depende de @media -->
         <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%; background:#f5f8fc;">
             <tbody>
                 <tr>
@@ -113,12 +98,14 @@
                         <table role="presentation" width="640" cellspacing="0" cellpadding="0" border="0" style="width:100%; max-width:640px; margin:0 auto;">
                             <tbody>
                                 <tr>
-                                    <td class="logo-cell" align="left" style="font-family:Arial, Helvetica, sans-serif;">
-                                        <img src="https://email-editor-production.s3.amazonaws.com/images/88214/editor_images/Atados_LogoHorizontal_Azul_fixed_optimized.png" width="160" alt="Atados" style="display:block; width:160px; max-width:160px; height:auto; border:0; outline:none; text-decoration:none;">
+                                    <td align="center" style="font-family:Arial, Helvetica, sans-serif; padding-bottom:16px;">
+                                        <img src="https://email-editor-production.s3.amazonaws.com/images/88214/editor_images/Atados_LogoHorizontal_Azul_fixed_optimized.png" width="160" alt="Atados" style="display:block; width:160px; max-width:160px; height:auto; border:0; outline:none; text-decoration:none; margin:0 auto;">
                                         <div style="margin-top:7px; font-size:11px; line-height:16px; font-weight:700; color:#6b7280; text-transform:uppercase; letter-spacing:0.08em;">Apoio ao voluntariado</div>
                                     </td>
-                                    <td class="caf-cell" align="right" style="font-family:Arial, Helvetica, sans-serif;">
-                                        <table class="caf-table" role="presentation" cellspacing="0" cellpadding="0" border="0" align="right" style="margin-left:auto;">
+                                </tr>
+                                <tr>
+                                    <td align="center" style="font-family:Arial, Helvetica, sans-serif;">
+                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin:0 auto;">
                                             <tbody>
                                                 <tr>
                                                     <td style="padding-right:12px; font-family:Arial, Helvetica, sans-serif; font-size:11px; line-height:16px; font-weight:700; color:#344256; text-align:right;">Organização validada<br>pela CAF International</td>
