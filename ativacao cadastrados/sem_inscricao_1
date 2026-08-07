@@ -99,6 +99,10 @@
     </style>
 </head>
 <body>
+    <!-- Preheader (invisível; aparece como prévia na caixa de entrada) -->
+    <div style="display:none;font-size:1px;color:#f5f8fc;line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;">
+        O voluntariado não é a única forma de ajudar. Veja outras maneiras de apoiar o Atados.&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;
+    </div>
     <center class="wrapper">
         
         <!-- HEADER PADRONIZADO (LOGO + CAF INTERNATIONAL) -->
