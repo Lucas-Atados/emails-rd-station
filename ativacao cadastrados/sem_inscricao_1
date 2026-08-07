@@ -90,7 +90,12 @@
     </div>
     <center class="wrapper">
         
-        <!-- HEADER PADRONIZADO (LOGO + CAF INTERNATIONAL) — sempre empilhado, não depende de @media -->
+        <!-- HEADER PADRONIZADO (LOGO + CAF INTERNATIONAL)
+             Tecnica "hybrid/spongy": as duas metades sao inline-block com max-width.
+             Ficam lado a lado quando ha espaco (desktop) e quebram sozinhas para
+             empilhado em telas estreitas, SEM depender de @media (que o app do
+             Gmail e o Outlook.com ignoram). A ghost table em <!--[if mso]--> serve
+             so para o Outlook desktop, que nao lida bem com inline-block. -->
         <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="width:100%; background:#f5f8fc;">
             <tbody>
                 <tr>
@@ -98,23 +103,28 @@
                         <table role="presentation" width="640" cellspacing="0" cellpadding="0" border="0" style="width:100%; max-width:640px; margin:0 auto;">
                             <tbody>
                                 <tr>
-                                    <td align="center" style="font-family:Arial, Helvetica, sans-serif; padding-bottom:16px;">
-                                        <img src="https://email-editor-production.s3.amazonaws.com/images/88214/editor_images/Atados_LogoHorizontal_Azul_fixed_optimized.png" width="160" alt="Atados" style="display:block; width:160px; max-width:160px; height:auto; border:0; outline:none; text-decoration:none; margin:0 auto;">
-                                        <div style="margin-top:7px; font-size:11px; line-height:16px; font-weight:700; color:#6b7280; text-transform:uppercase; letter-spacing:0.08em;">Apoio ao voluntariado</div>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td align="center" style="font-family:Arial, Helvetica, sans-serif;">
-                                        <table role="presentation" cellspacing="0" cellpadding="0" border="0" style="margin:0 auto;">
-                                            <tbody>
-                                                <tr>
-                                                    <td style="padding-right:12px; font-family:Arial, Helvetica, sans-serif; font-size:11px; line-height:16px; font-weight:700; color:#344256; text-align:right;">Organização validada<br>pela CAF International</td>
-                                                    <td style="font-size:0; line-height:0;">
-                                                        <img src="https://email-editor-production.s3.amazonaws.com/images/88214/editor_images/selo-caf.png" width="68" alt="Organização validada pela CAF International" style="display:block; width:68px; max-width:68px; height:auto; border:0;">
-                                                    </td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
+                                    <td align="center" style="font-size:0; line-height:0; text-align:center;">
+
+                                        <!--[if mso]><table role="presentation" width="608" cellspacing="0" cellpadding="0" border="0"><tr><td width="300" valign="middle" align="left"><![endif]-->
+                                        <div style="display:inline-block; width:100%; max-width:300px; min-width:220px; vertical-align:middle; text-align:left; font-family:Arial, Helvetica, sans-serif;">
+                                            <img src="https://email-editor-production.s3.amazonaws.com/images/88214/editor_images/Atados_LogoHorizontal_Azul_fixed_optimized.png" width="160" alt="Atados" style="display:block; width:160px; max-width:160px; height:auto; border:0; outline:none; text-decoration:none;">
+                                            <div style="margin-top:7px; font-size:11px; line-height:16px; font-weight:700; color:#6b7280; text-transform:uppercase; letter-spacing:0.08em;">Apoio ao voluntariado</div>
+                                        </div>
+                                        <!--[if mso]></td><td width="300" valign="middle" align="right"><![endif]-->
+                                        <div style="display:inline-block; width:100%; max-width:300px; min-width:220px; vertical-align:middle; text-align:right; font-family:Arial, Helvetica, sans-serif;">
+                                            <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="right" style="margin-left:auto;">
+                                                <tbody>
+                                                    <tr>
+                                                        <td style="padding-right:12px; font-family:Arial, Helvetica, sans-serif; font-size:11px; line-height:16px; font-weight:700; color:#344256; text-align:right;">Organiza&ccedil;&atilde;o validada<br>pela CAF International</td>
+                                                        <td style="font-size:0; line-height:0;">
+                                                            <img src="https://email-editor-production.s3.amazonaws.com/images/88214/editor_images/selo-caf.png" width="68" alt="Organiza&ccedil;&atilde;o validada pela CAF International" style="display:block; width:68px; max-width:68px; height:auto; border:0;">
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                        <!--[if mso]></td></tr></table><![endif]-->
+
                                     </td>
                                 </tr>
                             </tbody>
